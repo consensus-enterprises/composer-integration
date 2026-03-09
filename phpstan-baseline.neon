@@ -1,0 +1,7 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Instantiated class Tuf\\Tests\\FixtureBuilder\\Fixture not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: tests/FunctionalTestBase.php

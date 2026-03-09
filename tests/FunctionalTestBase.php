@@ -40,6 +40,8 @@ abstract class FunctionalTestBase extends TestCase
         mkdir($this->workingDir . '/tuf', recursive: true);
 
         // Make PHP-TUF's fixture builder available.
+        // @TODO: Consider moving the fixture builder to its own library that
+        // both php-tuf and composer-integration can pull in via require-dev.
         $loaders = ClassLoader::getRegisteredLoaders();
         reset($loaders)->addPsr4('Tuf\\Tests\\', key($loaders) . '/php-tuf/php-tuf/tests');
 
