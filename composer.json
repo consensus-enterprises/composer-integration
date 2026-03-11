@@ -40,6 +40,10 @@
         "dms/phpunit-arraysubset-asserts": "^0.5.0"
     },
     "scripts": {
+        "coverage": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --coverage-text --color=always --testdox"
+        ],
         "test": [
             "phpunit ./tests --debug"
         ]
