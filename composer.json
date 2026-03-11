@@ -37,11 +37,20 @@
         "composer/composer": "^2.9",
         "phpunit/phpunit": "^9.5",
         "symfony/process": "^6",
-        "dms/phpunit-arraysubset-asserts": "^0.5.0"
+        "dms/phpunit-arraysubset-asserts": "^0.5.0",
+        "squizlabs/php_codesniffer": "^4.0",
+        "slevomat/coding-standard": "^8.28"
     },
     "scripts": {
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf",
         "test": [
             "phpunit ./tests --debug"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }
